@@ -1,0 +1,181 @@
+/* This code snippet sets the margin and padding of all elements to 0,and ensures that the box-sizing property is set to border-box. 
+It also sets the height and width of the html and body elements to 100%. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy-Light';
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 30% 50% 20%;
+}
+#l-top-left{
+    /* background-color: crimson; */
+    padding: 2vw;
+}
+#smallbox{
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    rotate: 45deg;
+}
+
+
+#l-top-right{
+    /* background-color: #b4d847; */
+    justify-self: end;
+    padding: 2vw;
+    text-align: end;
+    font-size: 1.05vw;
+    line-height: 1.15vw;
+}
+#l-top-right h4{
+    margin-bottom: 2.2vw;
+    font-size: 1.3vw;
+}
+#l-center{
+    /* background-color: #5b6db4; */
+    grid-column: 1/3;
+    padding: 0vw 15vw 0 3vw;
+    line-height: 80px;
+}
+#l-center h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: -7px;
+
+}
+#l-center h1:nth-child(2n){
+    text-align: end;
+}
+#l-buttom{
+    /* background-color: #9c3589; */
+    grid-column: 1/3;
+    padding: 0 2vw;
+    background-color: #ededed;
+    margin-top: -10px;
+}
+#l-buttom p::first-letter{
+    font-size: 35px;
+}
+#right{
+    /* background-color: #14dcb4; */
+    grid-column: 3;
+    grid-row: 1/4;
+    padding: 40px;
+    padding-right: 200px;
+}
+#right video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+#arrow{
+    height: 30px;
+    width: 30px;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px;
+    left: 51%;
+    top: 50%;
+}
+
+#arrow i{
+    font-size: 30px;
+}
+
+
+
+
+/* This code snippet sets a CSS media query that applies styles only when the viewport width is less than or equal to 600 pixels. */
+@media (max-width:600px) {
+    #main{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 18% 38% 45% 20%;
+    }
+    #l-top-left{
+        padding: 20px;
+    }
+    #smallbox{
+        height: 15px;
+        width: 15px;
+        background-color: black;
+        rotate: 45deg;
+    }
+    
+    
+    #l-top-right{
+        justify-self: end;
+        padding: 10px;
+        text-align: end;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #l-top-right h4{
+        margin-bottom: 17px;
+        font-size: 14px;
+    }
+    #l-center{
+        padding: 4vw 30vw 0 5vw;
+        line-height: 50px;
+    }
+    #l-center h1{
+        font-size: 50px;
+        letter-spacing: -4px;
+    
+    }
+    #l-center h1:nth-child(2n){
+        text-align: end;
+    }
+    #l-buttom{
+        grid-column: 1/3;
+        padding: 0 2vw;
+    }
+    #l-buttom p::first-letter{
+        font-size: 35px;
+    }
+    #right{
+        grid-column: 3;
+        grid-row: 1/4;
+    }
+    #right video{
+        height: 130%;
+        width: 220%;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: -40px;
+    
+    }
+    #arrow{
+        left: 45%;
+        top: 51%;
+    }
+    
+    #right{
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+    #l-top-left{
+        padding: 20px;
+    }    
+    
+    
+    
+}
